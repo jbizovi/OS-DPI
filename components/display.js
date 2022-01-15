@@ -22,6 +22,7 @@ class Display extends Base {
   static defaultProps = {
     stateName: "$Display",
     background: "white",
+    fontSize: "16px",
     scale: "1",
   };
   static functionsInitialized = false;
@@ -29,6 +30,7 @@ class Display extends Base {
   template() {
     const style = styleString({
       backgroundColor: this.props.background,
+      fontSize: this.props.fontSize+"px",   //default to px for now.
     });
     const { state } = this.context;
     /** @type {Hole[]} */
